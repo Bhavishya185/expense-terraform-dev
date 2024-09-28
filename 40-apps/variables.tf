@@ -14,27 +14,21 @@ variable "common_tags" {
     }
 }
 
-variable "mysql_sg_tags" {
+variable "mysql_tags" {
     default = {
-        Component = "mysql"
+        component = "mysql"
     }
 }
 
-variable "backend_sg_tags" {
+variable "backend_tags" {
     default = {
         Component = "backend"
     }
 }
 
-variable "frontend_sg_tags" {
+variable "frontend_tags" {
     default = {
         Component = "frontend"
-    }
-}
-
-variable "bastion_sg_tags" {
-    default = {
-        component = "bastion"
     }
 }
 
@@ -42,4 +36,8 @@ variable "ansible_sg_tags" {
     default = {
         Component = "ansible"
     }
+}
+
+variable "zone_name" {
+    default = "daws81s.shop"
 }
